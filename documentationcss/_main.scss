@@ -1,0 +1,139 @@
+main {
+  padding: 48px 112px 104px 112px;
+  section {
+    margin-bottom: 128px;
+    .heading {
+      font-size: 34px;
+      margin-bottom: 72px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .dp-grid {
+      display: grid;
+      grid-column-gap: 54px;
+
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+        "topleft bigger"
+        "bottomleft bigger ";
+      .topleft {
+        grid-area: topleft;
+        div {
+          position: relative;
+
+          span {
+            font-weight: 500;
+          }
+          i {
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            top: 30%;
+          }
+        }
+        ul {
+          list-style: inherit;
+          line-height: 32px;
+          margin-top: 24px;
+          margin-bottom: 24px;
+          li:last-child {
+            color: $primaryColor;
+          }
+        }
+      }
+      .bigger {
+        grid-area: bigger;
+        border-left: 1px solid $buttoncolor;
+
+        padding-left: 32px;
+        padding-right: 104px;
+        .top-part {
+          h5 {
+            font-size: 24px;
+            margin-bottom: 32px;
+          }
+        }
+        .bottom-part {
+          h6 {
+            margin-top: 16px;
+            margin-bottom: 40px;
+            font-size: 20px;
+            font-weight: 500;
+          }
+          img {
+            margin-top: 32px;
+            height: 224px;
+          }
+        }
+      }
+      .bottomleft {
+        grid-area: bottomleft;
+        div {
+          position: relative;
+          span {
+            font-weight: 500;
+          }
+          i {
+            position: absolute;
+            right: 10px;
+            font-size: 12px;
+            top: 30%;
+          }
+        }
+        ul {
+          li {
+            position: relative;
+            font-weight: 500;
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 586px) {
+  .dp-none {
+    display: none;
+  }
+  main {
+    padding-bottom: unset;
+    padding-top: 24px;
+    section {
+      margin-bottom: 88px;
+      .dp-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "topleft"
+          "bigger"
+          "bottomleft";
+
+        .bigger {
+          padding: 32px 0;
+          border-left: none;
+          border-top: 1px solid $buttoncolor;
+        }
+
+        .bottomleft {
+          padding-top: 40px;
+          border-top: 1px solid $buttoncolor;
+          div {
+            i {
+              right: 0;
+            }
+          }
+          ul {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

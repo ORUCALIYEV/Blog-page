@@ -1,0 +1,26 @@
+@media (min-width: 1200px) {
+  header {
+    .nameandlogo {
+      .menu {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  header,
+  footer,
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  header {
+    .menu {
+      display: flex;
+    }
+    nav {
+      display: none;
+    }
+  }
+}

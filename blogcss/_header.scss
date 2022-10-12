@@ -1,0 +1,173 @@
+header {
+  position: relative;
+  padding-left: 112px;
+  padding-right: 112px;
+  height: 96px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px $buttoncolor;
+  .nameAndLogo {
+    display: flex;
+    gap: 16px;
+    .menu {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: none;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      .line {
+        width: 25px;
+        height: 3px;
+        background: #000;
+        border-radius: 3px;
+        transition: all 0.5s ease-in-out;
+        &::before,
+        &::after {
+          content: " ";
+          position: absolute;
+          border-radius: 3px;
+          width: 25px;
+          height: 3px;
+          background: #000;
+          transition: all 0.5s ease-in-out;
+        }
+        &::before {
+          transform: translateY(-8px);
+        }
+
+        &::after {
+          transform: translateY(8px);
+        }
+      }
+    }
+    .open .line {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+    }
+    .open .line::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+    .open .line::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 48px;
+      margin: auto;
+      li {
+        a {
+          &:hover {
+            color: $primaryColor;
+          }
+          font-weight: 500;
+        }
+      }
+      li:nth-child(3) {
+        a {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+
+  i,
+  i::before {
+    display: none;
+    position: absolute;
+  }
+  .buttons {
+    .btn {
+      padding: 12px 26px;
+      border-radius: 8px;
+      font-size: 14px;
+      border: 1px solid $buttoncolor;
+      &:nth-child(1) {
+        font-weight: 500;
+        margin-right: 8px;
+      }
+      &:nth-child(2) {
+        background: $primaryColor;
+        color: white;
+        border: 1px solid $primaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    .nameAndLogo .logo {
+      font-size: 24px;
+    }
+    .openednavbar {
+      display: flex !important;
+      position: absolute;
+
+      overflow: hidden;
+      transition: all 0.3s;
+      top: 102%;
+      right: 100%;
+      z-index: 3;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 0;
+      ul {
+        display: block;
+        width: 100%;
+        padding: 0;
+
+        gap: 0;
+        li {
+          a {
+            border-bottom: 1px solid gray;
+            display: block;
+          }
+        }
+      }
+    }
+    .menu {
+      width: unset !important;
+      display: flex !important;
+    }
+    .buttons {
+      .btn {
+        font-size: 14px !important;
+      }
+      .btn:nth-child(1) {
+        display: none;
+      }
+      .btn:nth-child(2) {
+        padding: 12px 14px;
+
+        span {
+          display: none;
+        }
+      }
+    }
+    i,
+    i::before {
+      display: inline-block;
+      font-size: 24px;
+      position: relative;
+    }
+    .navbar {
+      display: none;
+      position: absolute;
+      right: 0;
+      transition: 0.3s;
+    }
+  }
+}

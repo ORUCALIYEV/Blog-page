@@ -1,0 +1,75 @@
+main {
+  .redcontainer {
+    margin-top: 0;
+    & {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+    .row {
+      z-index: -2;
+      position: relative;
+      height: 240px;
+      background: $primaryColor;
+      border-radius: 16px;
+      justify-content: center;
+      align-items: center;
+      div {
+        text-align: center;
+        &:nth-child(3) {
+          text-align: left;
+          padding-left: 64px;
+          color: white;
+          h3 {
+            font-size: 48px;
+            width: 494px;
+          }
+          p {
+            width: 528px;
+          }
+        }
+        .btn {
+          height: 48px;
+          width: 174px;
+          border-radius: 8px;
+          padding: 12px;
+          border: 1px solid white;
+          background: white;
+          &:nth-child(1) {
+            font-weight: 500;
+          }
+          &:nth-child(2) {
+            margin-left: 24px;
+            color: white;
+            background: black;
+            border: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.posabsolute-1 {
+  position: absolute;
+  height: 374px;
+  width: 374px;
+  left: -54px;
+  top: 85px;
+  border-radius: 50%;
+  background: #ffffff29;
+
+  z-index: -1;
+}
+
+.posabsolute-2 {
+  position: absolute;
+  height: 304px;
+  width: 304px;
+  left: -19px;
+  top: 179px;
+  border-radius: 50%;
+  background: #ffffff29;
+
+  z-index: -1;
+}

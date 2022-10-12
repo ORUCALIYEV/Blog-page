@@ -1,0 +1,26 @@
+@import "../blogcss/_variables";
+@import "../blogcss/_header";
+@import "./main";
+@import "../blogcss/_redcontainer";
+@import "../blogcss/_footer";
+@import "../blogcss/_mediaqueries";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Euclid Circular A", sans-serif;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+header nav ul li:nth-child(3) a{
+  color: unset;
+}

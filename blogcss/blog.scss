@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./mediaqueries";
+@import "./header";
+@import "./main";
+@import "./redcontainer";
+@import "./footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Euclid Circular A", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+@media (max-width: 576px) {
+  header,
+  footer,
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
