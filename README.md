@@ -3,7 +3,7 @@ This is simple blog page I created while I was learning HTML &amp; CSS (bootstra
 
 # USED TECHNOLOGIES:
 HTML,
-CSS (SASS/SCSS),
+CSS (SASS/SCSS), bootstrap 5
 JS
 
 # Netlify Link : https://simple-blog-page-oruc-aliyev.netlify.app/blog.html
